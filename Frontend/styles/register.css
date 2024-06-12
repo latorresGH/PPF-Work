@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.titulo , .spanTitulo, span {
+    color: #fff;
+}
+
+
+body {
+    background-image: url(https://4kwallpapers.com/images/wallpapers/gradient-background-6016x3384-11027.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 10px;
+}
+
+.restaurarContrasenia {
+    font-size: 12px;
+    display: flex;
+    margin: 15px;
+}
+
+.restaurarContrasenia .restaurarPw {
+    text-decoration: none;
+    color: #e5a7fd;
+    font-weight: 300;
+    margin: 0 5px;
+}
+
+.login {
+    max-width: 700px;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    backdrop-filter: blur(55px);
+    -webkit-backdrop-filter: blur(55px);
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0px 32px 0 rgba(0,0,0,0.37);
+}
+
+.login .titulo {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.login form .registerInput {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .registerInput .input-box{
+    margin: 15px 0 12px 0;
+    width: calc(100% / 2 - 20px);
+}
+
+.registerInput .input-box .input-icon {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.registerInput .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    padding-left: 7px;
+    background: #1f1f1f94;
+    transition: ease .3s;
+}
+
+.registerInput .input-box input:hover {
+    box-shadow: 0 0px 32px 0 rgba(255, 83, 3, 0.699);
+}
+
+.registerInput .input-box .spanTitulo {
+    font-weight: 600;
+    display: block;
+}
+
+.material-symbols-outlined {
+    padding-right: 5px;
+}
+
+form .button {
+    height: 45px;
+    margin: 25px 0;
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    color: #fff;
+    background-color: #0f0f0f;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: ease-in-out .3s;
+}
+
+form .button input:hover {
+    background-color: #1f1f1f;
+}
+
+@media (max-width: 584px) {
+    .login {
+        max-width: 100%;
+    }
+    form .registerInput .input-box{
+        margin: 15px;
+        width: 100%
+    }
+    .login form .registerInput {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+}
+
+

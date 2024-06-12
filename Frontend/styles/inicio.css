@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+h1,h2,h3,h4,h5,a,p,span,ul,li {
+    color: #fff;
+}
+
+body {
+    background-image: url(https://images5.alphacoders.com/380/thumb-1920-380543.jpg);
+    background-size: cover;
+    background-size: 100vw;
+}
+
+.logo .logoTitulo {
+    font-size: 35px;;
+}
+
+.headerDiv header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(8, 8, 8);
+    box-shadow: 0 0px 32px 0 rgba(0, 0, 0, 0.945);
+    height: 80px;
+    padding: 0px 30px;
+}
+
+header .listaHeader ul {
+    display: flex;
+}
+
+.material-symbols-rounded {
+    font-size: 18px
+}
+
+header .listaHeader ul li{
+    margin: 5px;
+    list-style: none;
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+.sectionsLi {
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+    position: relative;
+}
+
+.sectionsLi .material-symbols-rounded,
+.sectionsLi .headerList {
+    transition: color 0.3s ease, text-shadow 0.3s ease, filter 0.3s ease; /
+}
+
+.sectionsLi:hover .material-symbols-rounded,
+.sectionsLi:hover .headerList {
+    color: rgb(248, 244, 255); /* Color al que cambiará al hacer hover */
+    text-shadow: 0 0 20px rgba(255, 0, 255, 0.8), /* Text-shadow principal */
+                 0 0 40px rgba(255, 0, 255, 0.6), /* Text-shadow secundario */
+                 0 0 60px rgba(255, 0, 255, 0.4); /* Text-shadow más suave */
+    filter: brightness(350%); /* Ajusta el brillo al 150% */
+}
+
+.sectionsLi::after{
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 0, 255, 0.6);
+    height: 1.5px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.sectionsLi:hover:after{
+    width: 100%;
+}
+
+
+.userHeader .material-symbols-rounded {
+    transition: color 0.3s ease, text-shadow 0.3s ease, filter 0.3s ease, transform 0.3s ease; /* Añade transform a la transición */
+}
+
+.userHeader:hover .material-symbols-rounded {
+    color: rgb(248, 244, 255); /* Color al que cambiará al hacer hover */
+    text-shadow: 0 0 20px rgba(255, 0, 255, 0.8), /* Text-shadow principal */
+                 0 0 40px rgba(255, 0, 255, 0.6), /* Text-shadow secundario */
+                 0 0 60px rgba(255, 0, 255, 0.4); /* Text-shadow más suave */
+    filter: brightness(350%); /* Ajusta el brillo al 150% */
+    transform: scale(1.1);
+}
+
+
+.userHeader span {
+    font-size: 35px;
+}
