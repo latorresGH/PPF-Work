@@ -1,50 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 h1,h2,h3,h4,h5,a,p,span,ul,li {
-    color: #fff;
+    color: #d3d3d3;
 }
 
 body {
-    background-image: url(https://images5.alphacoders.com/380/thumb-1920-380543.jpg);
     background-size: cover;
     background-size: 100vw;
 }
 
 .logo .logoTitulo {
-    font-size: 35px;;
+    font-size: 35px;
 }
+
+.iconoPerfil {
+    display: flex;
+    align-items: center;
+}
+
+.iconoPerfil .userName {
+    margin: 5px;
+    font-size: 13px;
+    color: #8f8f8f;
+}
+
 
 .headerDiv header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(8, 8, 8);
-    box-shadow: 0 0px 32px 0 rgba(0, 0, 0, 0.945);
+    position: fixed;
     height: 80px;
     padding: 0px 30px;
+    z-index: 1000;
+    width: 100%;
+    background: linear-gradient( #000000, #00000000);
 }
 
 header .listaHeader ul {
     display: flex;
 }
 
-.material-symbols-rounded {
-    font-size: 18px
+.material-symbols-rounded, .sectionsLi .material-symbols-outlined {
+    font-size: 15px;
+    color: #e9e9e9;
 }
 
 header .listaHeader ul li{
-    margin: 5px;
+    margin: 7px;
     list-style: none;
-    font-size: 17px;
-    font-weight: 300;
-    letter-spacing: 3px;
+    font-size: 16px;
+    font-weight: 200;
+    color: white;
 }
 
 .sectionsLi {
@@ -71,12 +86,12 @@ header .listaHeader ul li{
 .sectionsLi::after{
     content: "";
     position: absolute;
-    background-color: rgba(255, 0, 255, 0.6);
+    background-color: #e9e9e9;
     height: 1.5px;
     width: 0%;
     left: 0;
     bottom: -10px;
-    transition: 0.3s;
+    transition: 0.25s;
 }
 
 .sectionsLi:hover:after{
@@ -84,20 +99,169 @@ header .listaHeader ul li{
 }
 
 
-.userHeader .material-symbols-rounded {
-    transition: color 0.3s ease, text-shadow 0.3s ease, filter 0.3s ease, transform 0.3s ease; /* Añade transform a la transición */
+.profileIcon {
+    transition: box-shadow 0.3s ease, filter 0.3s ease;;
+    height: 50px;
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+    border: 1px solid #fff;
 }
 
-.userHeader:hover .material-symbols-rounded {
-    color: rgb(248, 244, 255); /* Color al que cambiará al hacer hover */
-    text-shadow: 0 0 20px rgba(255, 0, 255, 0.8), /* Text-shadow principal */
-                 0 0 40px rgba(255, 0, 255, 0.6), /* Text-shadow secundario */
-                 0 0 60px rgba(255, 0, 255, 0.4); /* Text-shadow más suave */
-    filter: brightness(350%); /* Ajusta el brillo al 150% */
-    transform: scale(1.1);
+.profileIcon:hover {
+    filter: brightness(150%);
+}
+
+.userHeader {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.buscador form {
+    display: flex;
+    align-items: center;
+}
+
+.buscadorHeader {
+    display: flex;
+    align-items: center;
+}
+
+.buscador {
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+
+.buscadorInput {
+    border: none;
+    height: 30px;
+    width: 0;
+    outline: none;
+    border-radius: 20px;
+    transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    background-color: #202020;
+    color: #fff;
+    font-size: 14px;
+    opacity: 0;
+    margin-right: 0px
+}
+
+.buscadorInput::placeholder {
+    color: #8f8f8f;
+}
+
+.iconoBuscador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.2s;
 }
 
 
-.userHeader span {
-    font-size: 35px;
+.buscador:focus-within .buscadorInput {
+    width: 200px;
+    opacity: 1;
+    padding-left: 10px;
+}
+
+
+/* FINALIZACION DEL HEADER */
+
+.trailerSection {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2019/07/hipertextual-ver-avengers-endgame-4k-2019810743-scaled.jpeg?fit=2560%2C1440&quality=50&strip=all&ssl=1) no-repeat center center;
+    background-size: cover;
+    filter: brightness(35%);
+    z-index: -1; /* Asegura que esté detrás del contenido principal */
+}
+
+.dataTrailerSection {
+    display: flex;
+    margin: 25vh 0 0vh 5vw;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    gap: 20px;
+    padding-right: 9vw;
+}
+
+.dataTrailerSection span {
+    border-top: 1px solid #ffffff75;
+    border-bottom: 1px solid #ffffff75;
+    padding: 0.5vw;
+    font-size: 0.7vw;
+}
+
+.dataTrailerSection p {
+    font-size: 0.9vw;
+}
+
+.dataTrailerSection h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 7vw;
+    top: 20px;
+    position: relative;
+    color: #fff;
+    line-height: 0.9; /* Ajusta la altura de línea */
+}
+
+.botonVerAhora {
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+  }
+  
+  .botonVerAhora:hover {
+    background-color: hsl(0, 0%, 27%);
+    color: hsl(0, 0%, 100%);
+  }
+  
+  .botonVerAhora:active {
+    background-color: hsl(0, 0%, 91%);
+    color: hsl(0, 0%, 100%);
+    transform: scale(1.1,1.1);
+    transition: 100ms;
+  }
+
+  @media screen and (max-width: 768px) {
+    .dataTrailerSection {
+        margin: 5vh 5% 0 5%;
+        width: 70%;
+    }
+
+    .dataTrailerSection h1 {
+        font-size: 15vw;
+    }
+
+    .dataTrailerSection span {
+        font-size: 3.5vw;
+    }
+
+    .dataTrailerSection p {
+        font-size: 3vw;
+    }
 }
